@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `bz_stream` struct in crate `bzip2-sys`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, bz_stream">
+
+    <title>bzip2-sys::bz_stream - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>bzip2-sys</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.bz_stream.html' title=''>bz_stream</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.bz_internal_error.html' title=''>bz_internal_error</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>bzip2-sys</a>::<wbr><a class='struct' href=''>bz_stream</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]</a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-87' href='../src/bzip2-sys/lib.rs.html#26-42'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct bz_stream {
+    pub next_in: *mut <a class='type' href='../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>,
+    pub avail_in: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub total_in_lo32: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub total_in_hi32: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub next_out: *mut <a class='type' href='../libc/types/os/arch/c95/type.c_char.html' title='libc::types::os::arch::c95::c_char'>c_char</a>,
+    pub avail_out: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub total_out_lo32: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub total_out_hi32: <a class='type' href='../libc/types/os/arch/c95/type.c_uint.html' title='libc::types::os::arch::c95::c_uint'>c_uint</a>,
+    pub state: *mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+    pub bzalloc: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(*mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>, <a class='type' href='../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>, <a class='type' href='../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>) -&gt; *mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>&gt;,
+    pub bzfree: <a class='enum' href='http://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt; extern "C" fn(*mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>, *mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>)&gt;,
+    pub opaque: *mut <a class='enum' href='../libc/types/common/c95/enum.c_void.html' title='libc::types::common::c95::c_void'>c_void</a>,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.next_in'><a class='stability Unmarked' title='No stability level'></a><code>next_in</code></td><td></td></tr><tr><td id='structfield.avail_in'><a class='stability Unmarked' title='No stability level'></a><code>avail_in</code></td><td></td></tr><tr><td id='structfield.total_in_lo32'><a class='stability Unmarked' title='No stability level'></a><code>total_in_lo32</code></td><td></td></tr><tr><td id='structfield.total_in_hi32'><a class='stability Unmarked' title='No stability level'></a><code>total_in_hi32</code></td><td></td></tr><tr><td id='structfield.next_out'><a class='stability Unmarked' title='No stability level'></a><code>next_out</code></td><td></td></tr><tr><td id='structfield.avail_out'><a class='stability Unmarked' title='No stability level'></a><code>avail_out</code></td><td></td></tr><tr><td id='structfield.total_out_lo32'><a class='stability Unmarked' title='No stability level'></a><code>total_out_lo32</code></td><td></td></tr><tr><td id='structfield.total_out_hi32'><a class='stability Unmarked' title='No stability level'></a><code>total_out_hi32</code></td><td></td></tr><tr><td id='structfield.state'><a class='stability Unmarked' title='No stability level'></a><code>state</code></td><td></td></tr><tr><td id='structfield.bzalloc'><a class='stability Unmarked' title='No stability level'></a><code>bzalloc</code></td><td></td></tr><tr><td id='structfield.bzfree'><a class='stability Unmarked' title='No stability level'></a><code>bzfree</code></td><td></td></tr><tr><td id='structfield.opaque'><a class='stability Unmarked' title='No stability level'></a><code>opaque</code></td><td></td></tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "bzip2-sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
